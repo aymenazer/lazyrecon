@@ -38,8 +38,8 @@ jobs:
       - name: Install & Recon
         env:
           GO111MODULE: on
-          DISCORDWEBHOOKURL: ${{ secrets.DISCORD_WEBHOOK_URL }}
-          GITHUBTOKEN: ${{ secrets.GITHUBTOKEN }}
+          DISCORDWEBHOOKURL: ${{ https://discord.com/api/webhooks/944983397707702282/8wPyFkY6iuoQy9-wLPbGBJHasm7mk3nIgihkfLFt8eDMqbZl2w1yiQ2LRthYpUOPuCz9 }}
+          GITHUBTOKEN: ${{ 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 }}
         run: |
           export HOMEDIR=$HOME
           export HOMEUSER=$RUNNER_USER
@@ -53,7 +53,7 @@ jobs:
           echo "GO111MODULE=$GO111MODULE"
           sudo -E ./install.sh
           ./test/test_install.sh "./test/dependencies_list.txt"
-          sudo -E ./lazyrecon.sh "hackerone.com" --wildcard --alt --mad --fuzz --discord
+          sudo -E ./lazyrecon.sh "clio.com" --wildcard --alt --mad --fuzz --discord
           ls -alth $HOMEDIR/*
           ls -alth $STORAGEDIR/*
         shell: bash
