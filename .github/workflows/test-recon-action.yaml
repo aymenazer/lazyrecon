@@ -38,8 +38,8 @@ jobs:
       - name: Install & Recon
         env:
           GO111MODULE: on
-          DISCORDWEBHOOKURL: ${{ https://discord.com/api/webhooks/944983397707702282/8wPyFkY6iuoQy9-wLPbGBJHasm7mk3nIgihkfLFt8eDMqbZl2w1yiQ2LRthYpUOPuCz9 }}
-          GITHUBTOKEN: ${{ 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 }}
+          DISCORDWEBHOOKURL: https://discord.com/api/webhooks/944983397707702282/8wPyFkY6iuoQy9-wLPbGBJHasm7mk3nIgihkfLFt8eDMqbZl2w1yiQ2LRthYpUOPuCz9
+          GITHUBTOKEN: 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
         run: |
           export HOMEDIR=$HOME
           export HOMEUSER=$RUNNER_USER
